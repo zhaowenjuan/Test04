@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface FirstViewController : UIViewController
-
+#import "HeadView.h"
+@interface FirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,HeadViewDelegate>{
+    UITableView* _tableView;
+    NSInteger _currentSection;
+    NSInteger _currentRow;
+    
+}
+@property(nonatomic, retain) NSMutableArray* headViewArray;
+@property(nonatomic, retain) UITableView* tableView;
 @end
